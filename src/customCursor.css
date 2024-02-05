@@ -1,0 +1,31 @@
+
+.page-cursor.cursor-active {
+    opacity: 0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.page-cursor {
+    background: hsla(0, 0%, 100%, .2);
+}
+
+.page-cursor {
+    opacity: 0;
+    width: 2rem;
+    height: 2rem;
+    z-index: 9999;
+    position: absolute;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    border-radius: 100%;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.64, .57, .67, 1.53);
+    transition: -webkit-transform .2s cubic-bezier(.64, .57, .67, 1.53);
+    transition: transform .2s cubic-bezier(.64, .57, .67, 1.53);
+    transition: transform .2s cubic-bezier(.64, .57, .67, 1.53), -webkit-transform .2s cubic-bezier(.64, .57, .67, 1.53);
+}
+@media (min-width: 768px) {
+    .page-cursor.cursor-active {
+        opacity: 1;
+    }
+}
